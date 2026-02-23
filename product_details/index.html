@@ -8,10 +8,115 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" type="image/png" href="img/ice.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="../img/ice.png" />
 
     <title>Cyber Minimalist &mdash; Your e-commerce web page</title>
   </head>
-  <body style="background-color: brown"></body>
+  <body class="container">
+    <header class="header">
+      <!-- LEFT SIDE -->
+      <div class="header__left">
+        <img src="../img/ice.png" alt="Cyber Logo" class="header__left__logo" />
+        <h1 class="heading-1 header__left__brand">Cyber Minimalist</h1>
+
+        <nav class="header__nav">
+          <a href="#" class="header__nav__item">Shop</a>
+          <a href="#" class="header__nav__item">About</a>
+          <a href="#" class="header__nav__item">Contact</a>
+        </nav>
+      </div>
+      <!-- CENTER -->
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search..." />
+        <!-- <button class="search__button">
+          <svg class="search__icon">
+            <use xlink:href="img/sprite.svg#icon-search"></use>
+          </svg>
+        </button> -->
+      </form>
+      <!-- RIGHT SIDE -->
+      <div class="header__right">
+        <button class="header__right__button header__right--sign">
+          <svg class="header__right__icon">
+            <use xlink:href="../img/sprite.svg#icon-user"></use>
+          </svg>
+        </button>
+        <button class="header__right__button header__right--cart">
+          <svg class="header__right__icon">
+            <use xlink:href="../img/spritee.svg#icon-cart"></use>
+          </svg>
+          <span class="header__right--cart_badge">2</span>
+        </button>
+      </div>
+    </header>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__desc">
+          <div class="footer__desc__brand">
+            <img
+              src="../img/ice.png"
+              alt="Cyber Logo"
+              class="footer__brand__logo"
+            />
+            <h3 class="heading-1 footer__brand__name">Cyber Minimalist</h3>
+          </div>
+          <p>
+            Redefining humanity through precision engineering and tactical
+            cybernetics since 2084. Join the evolution.
+          </p>
+          <div class="footer__desc__socials">
+            <a href="#">
+              <svg class="socials__logos">
+                <use xlink:href="../img/spritee.svg#icon-earth"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="socials__logos">
+                <use xlink:href="../img/spritee.svg#icon-terminal"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="socials__logos">
+                <use xlink:href="../img/spritee.svg#icon-share2"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="#">About the Nexus</a></li>
+            <li><a href="#">Cyber-Careers</a></li>
+            <li><a href="#">Press Modules</a></li>
+            <li><a href="#">Investors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>SUPPORT</h4>
+          <ul>
+            <li><a href="#">Knowledge Base</a></li>
+            <li><a href="#">Warranty Registry</a></li>
+            <li><a href="#">Recovery Tools</a></li>
+            <li><a href="#">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="#">Augment Rights</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Neural Privacy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        &copy; 2084 CYBERNEXUS INDUSTRIES. ALL INTERFACES RESERVED.
+      </div>
+    </footer>
+  </body>
 </html>
