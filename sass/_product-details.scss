@@ -1,0 +1,89 @@
+.details {
+  grid-column: center-start / center-end;
+  //   background-color: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  &__image {
+    border: 1px solid $color-heading;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: white;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+    }
+  }
+  &__content {
+    margin-left: 2.5rem;
+  }
+  &__heading {
+    font-size: 4rem;
+    font-weight: 900;
+    color: white;
+    font-style: italic;
+    line-height: 4.5rem;
+
+    span {
+      color: $color-primary-light;
+    }
+  }
+  &__paragraph {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: $color-heading;
+    font-weight: 500;
+    max-width: 40rem;
+  }
+
+  &__bottom {
+    margin-top: 3rem;
+    max-width: 40rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__price {
+      color: $color-heading;
+      font-size: 2rem;
+      font-weight: 500;
+      //   margin-right: 15rem;
+    }
+
+    &__button {
+      background-color: $color-primary-light;
+      padding: 0.5rem 2.3rem 0.5rem 2.3rem;
+      border-radius: 10px;
+      border: none;
+    }
+    &__button:hover {
+      box-shadow: 0 0 20px $color-primary-light;
+      transform: translateY(-2px);
+    }
+    &__button:active {
+      transform: translateY(2px);
+      transform: translateY(0) scale(1);
+    }
+    &__icon {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
+  }
+
+  &__manufacture {
+    margin-top: 3rem;
+
+    &__heading {
+      color: white;
+      font-size: 2rem;
+      font-style: italic;
+    }
+    &__name {
+      margin-top: 0.5rem;
+      color: $color-heading;
+      font-size: 1.5rem;
+    }
+  }
+}
