@@ -1,0 +1,392 @@
+.catalog {
+  // background-color: yellow;
+  grid-column: center-start / center-end;
+  padding: 8rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+  }
+  &__sidebar {
+    // background: red;
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 2;
+    &__block {
+      display: flex;
+      flex-direction: column;
+
+      h5 {
+        color: $color-primary-light;
+        font-size: 1.3rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: 1.5rem;
+        font-weight: 900;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        color: $color-heading;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        &:last-child {
+          margin-bottom: 1.5rem;
+        }
+      }
+      input {
+        appearance: none;
+        background-color: $color-heading-1;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid $color-heading;
+        border-radius: 4px;
+        padding: 0.8rem;
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+      input::before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        transform: scale(0);
+        transition: transform 0.15s ease-in-out;
+        background-color: white;
+        clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+      }
+
+      input:checked {
+        background-color: $color-primary-light;
+        border-color: $color-primary-light;
+      }
+
+      input:checked::before {
+        transform: scale(1);
+      }
+      select {
+        width: 90%;
+        padding: 0.7rem;
+        border-color: $color-heading;
+        border-radius: 4px;
+        background-color: $color-heading-1;
+        color: white;
+        outline: none;
+      }
+
+      select:focus {
+        border-color: $color-primary-light;
+      }
+    }
+  }
+  &__content {
+    // background: brown;
+    grid-column: 2 / end;
+    // perspective: 1200px;
+  }
+}
+
+.featured {
+  &__container {
+    transition: transform 0.8s ease;
+    position: relative;
+    height: 42rem; // 🔥 IMPORTANT (must define height)
+    perspective: 1200px;
+    margin-bottom: 20px;
+  }
+  // &__container:hover {
+  //   transform: rotateY(180deg);
+  // }
+  &__card,
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 18px;
+    transition: transform 0.8s ease;
+  }
+  &__card {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+    padding: 4.5rem;
+    background: radial-gradient(
+      circle at top right,
+      rgba(0, 242, 255, 0.15),
+      transparent 40%
+    );
+    border: 1px solid $color-heading;
+    border-radius: 18px;
+    box-shadow: 0 0 40px rgba(0, 229, 255, 0.06);
+    margin-bottom: 2rem;
+    z-index: 2;
+  }
+
+  &__back {
+    color: white;
+    transform: rotateY(180deg);
+    background: radial-gradient(
+      circle at bottom left,
+      rgba(0, 242, 255, 0.15),
+      transparent 40%
+    );
+    border: 1px solid $color-primary-light;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h4 {
+      color: $color-primary-light;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: $color-heading;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    a {
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+    }
+  }
+  &__container:hover &__card {
+    transform: rotateY(-180deg);
+  }
+  &__container:hover &__back {
+    transform: rotateY(0);
+  }
+  &__image {
+    overflow: hidden;
+    border: 1px solid $color-heading;
+    border-radius: 14px;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+  &__badge {
+    font-size: 1.1rem;
+    letter-spacing: 0.15rem;
+    background: rgba(0, 229, 255, 0.15);
+    color: #00e5ff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+  &__title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 3.5rem;
+  }
+
+  &__description {
+    color: $color-heading;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__price {
+      color: $color-heading;
+      font-size: 2rem;
+    }
+    &__rating {
+      color: white;
+      fill: white;
+    }
+
+    &__button {
+      background: transparent;
+      border: 1px solid $color-heading;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    &__button:hover {
+      border-color: $color-primary-light;
+      box-shadow: 0 0 10px $color-primary-light;
+    }
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      transition: 0.3s;
+      text-align: center;
+      padding-top: 2px;
+      fill: $color-primary-light;
+    }
+
+    &__button:hover &__icon {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.product {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    perspective: 1200px;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  &__container {
+    position: relative;
+    width: 100%;
+    height: 42rem;
+    transition: transform 0.8s ease;
+    // transform-style: preserve-3d;
+    margin-bottom: 3rem;
+    backface-visibility: hidden;
+    perspective: 1200px;
+  }
+  // &__container:hover {
+  //   transform: rotateY(180deg);
+  // }
+  &__container:hover &__card {
+    transform: rotateY(-180deg);
+  }
+
+  &__container:hover &__back {
+    transform: rotateY(0);
+  }
+
+  &__card,
+  &__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 18px;
+    padding: 2.2rem;
+    backface-visibility: hidden; // ✅ MUST BE HERE
+    transition: transform 0.8s ease;
+    overflow: hidden;
+  }
+  &__card {
+    background: radial-gradient(
+      circle at top right,
+      rgba(0, 242, 255, 0.15),
+      transparent 40%
+    );
+    border: 1px solid $color-heading;
+  }
+
+  &__back {
+    background: radial-gradient(
+      circle at bottom left,
+      rgba(0, 242, 255, 0.15),
+      transparent 40%
+    );
+    transform: rotateY(180deg);
+    border: 1px solid $color-primary-light;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h4 {
+      color: $color-primary-light;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: $color-heading;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    a {
+      padding: 1rem;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+    }
+  }
+
+  &__image {
+    position: relative;
+    margin-bottom: 1.8rem;
+    img {
+      width: 100%;
+    }
+
+    &__badge {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      background-color: red;
+      font-size: 1rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 12px;
+      font-weight: 500;
+    }
+  }
+  &__card h3 {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    &__stars {
+      color: $color-primary-light;
+    }
+    &__count {
+      color: $color-heading;
+    }
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+    }
+    &__old {
+      text-decoration: line-through;
+      color: $color-heading;
+      font-size: 1.1rem;
+    }
+    &__new {
+      color: $color-primary-light;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+}

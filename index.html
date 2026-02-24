@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/ice.png" />
+
+    <title>Cyber Minimalist &mdash; Your e-commerce web page</title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <!-- LEFT SIDE -->
+      <div class="header__left">
+        <img src="img/ice.png" alt="Cyber Logo" class="header__left__logo" />
+        <h1 class="heading-1 header__left__brand">Cyber Minimalist</h1>
+
+        <nav class="header__nav">
+          <a href="#" class="header__nav__item">Shop</a>
+          <a href="#" class="header__nav__item">About</a>
+          <a href="#" class="header__nav__item">Contact</a>
+        </nav>
+      </div>
+      <!-- CENTER -->
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search..." />
+        <!-- <button class="search__button">
+          <svg class="search__icon">
+            <use xlink:href="img/sprite.svg#icon-search"></use>
+          </svg>
+        </button> -->
+      </form>
+      <!-- RIGHT SIDE -->
+      <div class="header__right">
+        <button class="header__right__button header__right--sign">
+          <svg class="header__right__icon">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
+        </button>
+        <button class="header__right__button header__right--cart">
+          <svg class="header__right__icon">
+            <use xlink:href="img/spritee.svg#icon-cart"></use>
+          </svg>
+          <span class="header__right--cart_badge">2</span>
+        </button>
+      </div>
+    </header>
+    <section class="hero">
+      <div class="hero__content">
+        <!-- LEFT SIDE -->
+        <div class="hero__left">
+          <h1 class="hero__left__title">
+            UPGRADE <br />YOUR <br />
+            <span>AUGMENTATION</span>
+          </h1>
+
+          <p class="hero__left__text">
+            Experience the next evolution of human capability with our premium
+            cybernetic enhancements. Precision-engineered for the digital age,
+            forged in the fires of the Nexus.
+          </p>
+
+          <div class="hero__left__buttons">
+            <button class="btn btn--primary">EXPLORE CATALOG</button>
+            <button class="btn btn--secondary">LEARN MORE</button>
+          </div>
+
+          <div class="hero__left__categories">
+            <button class="pill pill--active">All Products</button>
+            <button class="pill">Neural Links</button>
+            <button class="pill">Cyber Optics</button>
+            <button class="pill">Exoskeletons</button>
+            <button class="pill">Biometric Sensors</button>
+            <button class="pill">Nano-Dermal</button>
+            <button class="pill">Synapse Bridges</button>
+            <button class="pill">Audio Augs</button>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="hero__right">
+          <div class="hero__right__card">
+            <img src="img/chip.avif" alt="Cyber Chip" />
+            <!-- <p class="status">STATUS: OPTIMAL</p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="catalog">
+      <div class="catalog__container">
+        <div class="catalog__sidebar">
+          <div class="catalog__sidebar__block">
+            <h5>PRICE RANGE</h5>
+            <label><input type="checkbox" checked /> Under $50</label>
+            <label><input type="checkbox" /> $50 - $100</label>
+            <label><input type="checkbox" /> $100 - $200</label>
+            <label><input type="checkbox" /> $200+</label>
+          </div>
+          <div class="catalog__sidebar__block">
+            <h5>CATEGORIES</h5>
+            <label><input type="checkbox" checked /> Audio</label>
+            <label><input type="checkbox" /> Mouse</label>
+            <label><input type="checkbox" /> Keyboard</label>
+            <label><input type="checkbox" /> Cameras</label>
+            <label><input type="checkbox" /> Accessories</label>
+          </div>
+          <div class="catalog__sidebar__block">
+            <h5>RATING</h5>
+            <label><input type="checkbox" checked /> 4* & Up</label>
+            <label><input type="checkbox" /> 3* & Up</label>
+            <label><input type="checkbox" /> 2* & Up</label>
+            <label><input type="checkbox" /> 1* & Up</label>
+          </div>
+          <div class="catalog__sidebar__block">
+            <h5>SORT BY</h5>
+            <select>
+              <option>Latest Arrivals</option>
+              <option>Price: High to Low</option>
+              <option>Price: Low to High</option>
+              <option>Highest Rated</option>
+            </select>
+          </div>
+        </div>
+        <div class="catalog__content">
+          <div class="featured__container">
+            <div class="featured__card">
+              <div class="featured__image">
+                <img src="img/key.jpg" alt="Titanium Endoskeleton" />
+              </div>
+
+              <div class="featured__details">
+                <span class="featured__badge">FEATURED PRODUCT</span>
+
+                <h2 class="featured__title">
+                  TITANIUM <br />
+                  ENDOSKELETON
+                </h2>
+
+                <p class="featured__description">
+                  Grade-5 aerospace titanium construction with active hydraulic
+                  stabilization. Supports up to 2 tons of additional load with
+                  zero latency.
+                </p>
+
+                <div class="featured__bottom">
+                  <span class="featured__bottom__price">$8.45</span>
+                  <button class="featured__bottom__button">
+                    <svg class="featured__bottom__icon">
+                      <use xlink:href="img/spritee.svg#icon-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="featured__back">
+              <h4>Product Overview</h4>
+              <p>
+                Advanced retinal enhancement system with adaptive night vision,
+                threat detection overlay, and neural sync calibration.
+              </p>
+
+              <a href="product_details/" class="button-light">VIEW DETAILS</a>
+            </div>
+          </div>
+          <div class="product__grid">
+            <!-- Product 1 -->
+            <div class="product__container">
+              <div class="product__card">
+                <div class="product__image">
+                  <span class="product__image__badge">SALE -20%</span>
+                  <img src="img/key.jpg" alt="Optic MK-7" />
+                </div>
+
+                <h3>OPTIC MK-7 LENS</h3>
+
+                <div class="product__rating">
+                  <span class="product__rating__stars">★★★★★</span>
+                  <span class="product__rating__count">(142)</span>
+                </div>
+
+                <div class="product__price">
+                  <div class="product__price__container">
+                    <span class="product__price__old">1.20Ξ</span>
+                    <span class="product__price__new">0.96Ξ</span>
+                  </div>
+                  <button class="featured__bottom__button">
+                    <svg class="featured__bottom__icon">
+                      <use xlink:href="img/spritee.svg#icon-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__back">
+                <h4>Product Overview</h4>
+                <p>
+                  Advanced retinal enhancement system with adaptive night
+                  vision, threat detection overlay, and neural sync calibration.
+                </p>
+
+                <a href="product_details/" class="button-light">VIEW DETAILS</a>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product__container">
+              <div class="product__card">
+                <div class="product__image">
+                  <img src="img/key.jpg" alt="Neural Link" />
+                </div>
+
+                <h3>NEURAL LINK V3</h3>
+
+                <div class="product__rating">
+                  <span class="product__rating__stars">★★★★★</span>
+                  <span class="product__rating__count">(3.1k)</span>
+                </div>
+
+                <div class="product__price">
+                  <span class="product__price__new">2.50Ξ</span>
+                  <button class="featured__bottom__button">
+                    <svg class="featured__bottom__icon">
+                      <use xlink:href="img/spritee.svg#icon-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__back">
+                <h4>Product Overview</h4>
+                <p>
+                  Advanced retinal enhancement system with adaptive night
+                  vision, threat detection overlay, and neural sync calibration.
+                </p>
+
+                <a href="product_details/" class="button-light">VIEW DETAILS</a>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product__container">
+              <div class="product__card">
+                <div class="product__image">
+                  <img src="img/key.jpg" alt="Arm Augment" />
+                </div>
+
+                <h3>ARM AUGMENT MK-II</h3>
+
+                <div class="product__rating">
+                  <span class="product__rating__stars">★★★★★</span>
+                  <span class="product__rating__count">(89)</span>
+                </div>
+
+                <div class="product__price">
+                  <span class="product__price__new">4.10Ξ</span>
+                  <button class="featured__bottom__button">
+                    <svg class="featured__bottom__icon">
+                      <use xlink:href="img/spritee.svg#icon-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__back">
+                <h4>Product Overview</h4>
+                <p>
+                  Advanced retinal enhancement system with adaptive night
+                  vision, threat detection overlay, and neural sync calibration.
+                </p>
+
+                <a href="product_details/" class="button-light">VIEW DETAILS</a>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product__container">
+              <div class="product__card">
+                <div class="product__image">
+                  <img src="img/key.jpg" alt="Synapse Bridge" />
+                </div>
+
+                <h3>SYNAPSE BRIDGE</h3>
+
+                <div class="product__rating">
+                  <span class="product__rating__stars">★★★★★</span>
+                  <span class="product__rating__count">(52)</span>
+                </div>
+
+                <div class="product__price">
+                  <span class="product__price__new">3.25Ξ</span>
+                  <button class="featured__bottom__button">
+                    <svg class="featured__bottom__icon">
+                      <use xlink:href="img/spritee.svg#icon-cart"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="product__back">
+                <h4>Product Overview</h4>
+                <p>
+                  Advanced retinal enhancement system with adaptive night
+                  vision, threat detection overlay, and neural sync calibration.
+                </p>
+
+                <a href="product_details/" class="button-light">VIEW DETAILS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="banner">
+      <div class="banner__content">
+        <div class="banner__left">
+          <p class="banner__left__tag">
+            <span class="banner__left__dot"></span>
+            URGENT PROTOCOL
+          </p>
+
+          <h2 class="banner__left__title">
+            FLASH SALE: 30% OFF <br />
+            NEURAL INTERFACES
+          </h2>
+        </div>
+        <div class="banner__right">
+          <div class="banner__right__timer">
+            <div>
+              <span class="time">12</span>
+              <p>HOURS</p>
+            </div>
+            <span class="colon">:</span>
+            <div>
+              <span class="time">45</span>
+              <p>MINS</p>
+            </div>
+            <span class="colon">:</span>
+            <div>
+              <span class="time">28</span>
+              <p>SECS</p>
+            </div>
+          </div>
+
+          <button class="banner__right__btn">CLAIM DISCOUNT</button>
+        </div>
+      </div>
+    </section>
+    <section class="newsletter">
+      <div class="newsletter__container">
+        <svg class="newsletter__container__icon">
+          <use xlink:href="img/sprite.svg#icon-envelop"></use>
+        </svg>
+        <h2 class="newsletter__container__title">JOIN THE NETWORK</h2>
+        <p class="newsletter__container__text">
+          Receive daily system updates, firmware leaks, and exclusive
+          augmentation early-access protocols directly to your uplink.
+        </p>
+        <form class="newsletter__container__form">
+          <input
+            type="email"
+            class="newsletter__input"
+            placeholder="Email Id"
+          />
+          <button class="button-light">SUBSCRIBE</button>
+        </form>
+        <p class="newsletter__container__secure">
+          ZERO LATENCY ENCRYPTION GUARANTEED.
+        </p>
+      </div>
+    </section>
+    <section class="contact">
+      <div class="contact__container">
+        <div class="contact__container__left">
+          <h2 class="contact__title">CONTACT <span>US</span></h2>
+
+          <p class="contact__text">
+            Facing rejection with your latest install? Our technicians are
+            standing by to troubleshoot your biological-machine interface 24/7.
+          </p>
+          <div class="contact__info">
+            <div class="contact__item">
+              <svg class="contact__item__icon">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+              </svg>
+              <div>
+                <p class="contact__label-1">NEXUS CORE</p>
+                <p class="contact__label-2">Grid Sector 7, Neo-Tokyo</p>
+              </div>
+            </div>
+            <div class="contact__item">
+              <svg class="contact__item__icon">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+              </svg>
+              <div>
+                <p class="contact__label-1">NEXUS CORE</p>
+                <p class="contact__label-2">Grid Sector 7, Neo-Tokyo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact__container__right">
+          <form class="contact__form">
+            <div class="contact__form__row">
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email Id" />
+            </div>
+
+            <select>
+              <option>Technical Malfunction</option>
+              <option>Upgrade Issue</option>
+              <option>Firmware Request</option>
+            </select>
+            <textarea placeholder="Type your message..."></textarea>
+            <button type="submit" class="button-light">SEND UPLINK</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__desc">
+          <div class="footer__desc__brand">
+            <img
+              src="img/ice.png"
+              alt="Cyber Logo"
+              class="footer__brand__logo"
+            />
+            <h3 class="heading-1 footer__brand__name">Cyber Minimalist</h3>
+          </div>
+          <p>
+            Redefining humanity through precision engineering and tactical
+            cybernetics since 2084. Join the evolution.
+          </p>
+          <div class="footer__desc__socials">
+            <a href="#">
+              <svg class="socials__logos">
+                <use xlink:href="img/spritee.svg#icon-earth"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="socials__logos">
+                <use xlink:href="img/spritee.svg#icon-terminal"></use>
+              </svg>
+            </a>
+            <a href="#">
+              <svg class="socials__logos">
+                <use xlink:href="img/spritee.svg#icon-share2"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer__column">
+          <h4>COMPANY</h4>
+          <ul>
+            <li><a href="#">About the Nexus</a></li>
+            <li><a href="#">Cyber-Careers</a></li>
+            <li><a href="#">Press Modules</a></li>
+            <li><a href="#">Investors</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>SUPPORT</h4>
+          <ul>
+            <li><a href="#">Knowledge Base</a></li>
+            <li><a href="#">Warranty Registry</a></li>
+            <li><a href="#">Recovery Tools</a></li>
+            <li><a href="#">System Status</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__column">
+          <h4>LEGAL</h4>
+          <ul>
+            <li><a href="#">Augment Rights</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Neural Privacy</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        &copy; 2084 CYBERNEXUS INDUSTRIES. ALL INTERFACES RESERVED.
+      </div>
+    </footer>
+  </body>
+</html>

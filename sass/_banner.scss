@@ -1,0 +1,111 @@
+.banner {
+  background-color: $color-primary-light;
+  grid-column: full-start / full-end;
+  padding: 5rem 12rem;
+  background: linear-gradient(135deg, #00f2ff, #00c2cc);
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.15) 2px, transparent 1px);
+    background-size: 12px 12px;
+    opacity: 0.3;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__left {
+    transition: all 0.2s;
+    &__dot {
+      width: 10px;
+      height: 10px;
+      background: red;
+      border-radius: 50%;
+      animation: fade 1s ease-in-out infinite alternate;
+    }
+    &__tag {
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    &__title {
+      font-size: 6rem;
+      font-size: 900;
+      font-style: italic;
+      line-height: 1.1;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    &__timer {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.5rem;
+
+      .time {
+        font-size: 4rem;
+        font-weight: 900;
+        color: #000;
+      }
+
+      & p {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+
+      .colon {
+        font-size: 3rem;
+        font-weight: bold;
+        padding-bottom: 2.3rem;
+      }
+    }
+
+    &__btn {
+      background: #000;
+      color: $color-primary-light;
+      padding: 1.5rem 4rem;
+      border-radius: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    &__btn:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+      transform: translateY(-3px) scale(1.01);
+    }
+
+    &__btn:active {
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

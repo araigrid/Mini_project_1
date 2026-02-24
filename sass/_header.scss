@@ -1,0 +1,105 @@
+.header {
+  grid-column: full-start / full-end;
+  background: rgba(5, 5, 5, 0.6);
+  padding: 1.2rem 4rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid $color-primary-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  transition: all 0.3s ease;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    &__logo {
+      height: 4rem;
+      fill: $color-primary-light;
+      margin-left: 2rem;
+      transition: all 0.3s;
+    }
+
+    &__logo:hover {
+      transform: rotate(90deg);
+    }
+
+    &__brand {
+      color: $color-primary-light;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 1px;
+      font-style: italic;
+      letter-spacing: -0.7px;
+      //   line-height: 15px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+    margin-left: 2rem;
+    font-weight: 700;
+
+    & a {
+      text-decoration: none;
+      color: $color-heading;
+      font-size: 1.4rem;
+      transition: 0.3s;
+    }
+
+    & a:hover {
+      color: $color-primary-light;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    fill: $color-primary-light;
+
+    &__button {
+      background: transparent;
+      border: 1px solid $color-heading;
+      padding: 0.8rem 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    &__button:hover {
+      border-color: $color-primary-light;
+      box-shadow: 0 0 10px $color-primary-light;
+    }
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
+      transition: 0.3s;
+      text-align: center;
+      padding-top: 2px;
+    }
+
+    &__button:hover &__icon {
+      transform: scale(1.1);
+    }
+
+    &--cart_badge {
+      position: absolute;
+      background-color: #fff;
+      color: #000;
+      top: -6px;
+      right: -6px;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 2px 5px;
+      border-radius: 50%;
+    }
+  }
+}

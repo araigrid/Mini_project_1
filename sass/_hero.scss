@@ -1,0 +1,91 @@
+.hero {
+  grid-column: center-start / center-end;
+  padding: 8rem 0rem;
+  background: radial-gradient(
+    circle at right,
+    rgba(0, 242, 255, 0.15),
+    transparent 40%
+  );
+  color: #fff;
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 6rem;
+  }
+
+  &__left {
+    &__title {
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 2px;
+
+      span {
+        color: $color-primary-light;
+        font-style: italic;
+      }
+    }
+
+    &__text {
+      margin: 3rem 0;
+      color: $color-heading;
+      font-size: 1.8rem;
+      max-width: 60rem;
+    }
+
+    &__categories {
+      margin-top: 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: linear-gradient(left to right $color-primary-light);
+    // z-index: 10;
+    &__card {
+      padding: auto;
+      width: 50rem;
+      background: cover;
+      // overflow: hidden;
+    }
+
+    &__card img {
+      width: 100%;
+      transition: all 0.3s;
+    }
+    &__card img:hover {
+      filter: drop-shadow(0 0 20px #00f2ff);
+      transform: scale(1.01);
+    }
+  }
+}
+
+.pill {
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  border: none;
+  background: #111;
+  color: #ccc;
+  border: 1px solid #222;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.pill:hover {
+  border-color: #00f2ff;
+  color: #00f2ff;
+}
+.pill--active {
+  background: #00f2ff;
+  color: #000;
+}
+.pill--active:hover {
+  border-color: $color-heading;
+  color: #000;
+}

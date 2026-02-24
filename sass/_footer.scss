@@ -1,0 +1,100 @@
+.footer {
+  background: linear-gradient(135deg, $color-heading-1, $color-heading-2);
+  grid-column: full-start / full-end;
+  padding-bottom: 4rem;
+  padding-top: 8rem;
+  border-top: 1px solid white;
+
+  &__container {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 6rem;
+    margin: auto;
+  }
+  &__desc {
+    &__brand {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      img {
+        height: 3rem;
+        width: 3rem;
+      }
+      h3 {
+        color: $color-primary-light;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+    }
+    p {
+      color: $color-heading;
+      line-height: 1.7;
+      font-size: 1.3rem;
+      max-width: 32rem;
+    }
+
+    &__socials {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1.3rem;
+      align-items: center;
+      a {
+        padding: 1rem;
+        background-color: black;
+        border: 1px solid white;
+        border-radius: 5px;
+      }
+      svg {
+        fill: white;
+        width: 2rem;
+        height: 2rem;
+        display: flex; // 👈 Add this
+        align-items: center; // 👈 Vertical center
+        justify-content: center; // 👈 Horizontal center
+        transition: all 0.3s;
+      }
+      a:hover {
+        border-color: $color-primary-light;
+        svg {
+          fill: $color-primary-light;
+        }
+      }
+    }
+  }
+  &__column {
+    h4 {
+      color: white;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 2.5rem;
+    }
+
+    ul {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $color-heading;
+        font-size: 1.4rem;
+        transition: 0.3s ease;
+      }
+      a:hover {
+        color: $color-primary-light;
+      }
+    }
+  }
+  &__bottom {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid white;
+    color: $color-heading;
+    font-size: 1.3rem;
+  }
+}
