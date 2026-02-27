@@ -1,0 +1,41 @@
+.product-feature {
+  padding: 4rem;
+  grid-column: full-start / full-end;
+
+  &__container {
+  }
+  &__title {
+    font-size: 3rem;
+    color: white;
+    font-style: italic;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid $color-heading;
+    border-bottom: none;
+    border-right: none;
+
+    &__item {
+      padding: 3rem;
+      border-right: 1px solid $color-heading;
+      border-bottom: 1px solid $color-heading;
+      min-height: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .label {
+        font-size: 1.3rem;
+        color: $color-primary-light;
+      }
+      h2 {
+        color: white;
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}
