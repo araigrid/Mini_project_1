@@ -257,7 +257,7 @@
 .product {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
     gap: 2rem;
     perspective: 1200px;
     background: transparent;
@@ -296,6 +296,7 @@
     overflow: hidden;
   }
   &__card {
+    padding-top: 5rem;
     background: radial-gradient(
       circle at top right,
       rgba(0, 242, 255, 0.15),
