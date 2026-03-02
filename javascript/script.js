@@ -22,14 +22,13 @@ const displayProducts = function (items) {
 
     const discount = element.discount ? element.discount : 0;
 
-    let saleBadge = element.sale
-      ? `<span class="product__image__badge">SALE -${discount}%</span>`
-      : "";
+    let saleBadge = "";
 
-    saleBadge = !element.in_stock
-      ? `<span class="product__image__badge">OUT OF STOCK</span>`
-      : "";
-
+    if (!element.in_stock) {
+    saleBadge = `<span class="product__image__badge">OUT OF STOCK</span>`;
+    } else if (element.sale) {
+    saleBadge = `<span class="product__image__badge">SALE -${discount}%</span>`;
+    }
     const discountedPrice = element.sale
       ? Math.round(element.price - (element.price * discount) / 100)
       : element.price;
