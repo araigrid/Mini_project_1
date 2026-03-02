@@ -501,12 +501,12 @@ body {
   margin-bottom: 2rem;
 }
 .featured__title {
-  font-size: 3.5rem;
+  font-size: 3.5cqw;
   color: #ffffff;
   margin-bottom: 2rem;
   font-weight: 900;
   font-style: italic;
-  line-height: 3.5rem;
+  line-height: 3.5cqw;
 }
 .featured__description {
   color: #c6cccc;
@@ -1243,6 +1243,9 @@ body {
   }
   .footer__container {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+  .product__container__back p {
+    font-size: 0.8rem;
   }
 }
 @media (max-width: 480px) {

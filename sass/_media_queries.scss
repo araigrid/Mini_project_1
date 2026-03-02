@@ -21,6 +21,13 @@
   .footer__container {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   }
+  .product__container {
+    &__back {
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
 }
 
 @media (max-width: 480px) {
