@@ -67,11 +67,6 @@ const displayProducts = function (items) {
 
                 <div class="featured__bottom">
                     <span class="featured__bottom__price">$${element.price}</span>
-                    <button class="featured__bottom__button">
-                    <svg class="featured__bottom__icon">
-                        <use xlink:href="img/spritee.svg#icon-cart"></use>
-                    </svg>
-                    </button>
                 </div>
                 </div>
             </div>
@@ -112,11 +107,6 @@ const displayProducts = function (items) {
                     ${oldPriceHTML}
                     <span class="product__price__new">$${element.price}Ξ</span>
                 </div>
-                <button class="featured__bottom__button">
-                    <svg class="featured__bottom__icon">
-                    <use xlink:href="img/spritee.svg#icon-cart"></use>
-                    </svg>
-                </button>
                 </div>
             </div>
           <div class="product__back">
