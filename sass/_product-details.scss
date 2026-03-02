@@ -12,6 +12,7 @@
     overflow: hidden;
     background-color: white;
     min-width: 20rem;
+    aspect-ratio: 3 / 2;
     img {
       width: 100%;
       object-fit: cover;
@@ -37,12 +38,13 @@
     font-size: 1.5rem;
     color: $color-heading;
     font-weight: 500;
-    max-width: 40rem;
+    max-width: 43rem;
+    text-align: justify;
   }
 
   &__bottom {
     margin-top: 3rem;
-    max-width: 40rem;
+    max-width: 43rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
