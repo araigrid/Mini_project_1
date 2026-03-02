@@ -28,6 +28,7 @@ $font-display: "Josefin Sans", sans-serif;
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+  animation: fade 0.3s ease-in-out;
 }
 
 body {
@@ -54,4 +55,13 @@ body {
 
 .display_block {
   display: none;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
 }
