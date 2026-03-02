@@ -604,13 +604,13 @@ body {
 }
 .product__back h4 {
   color: #00f2ff;
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 3cqw;
+  margin-bottom: 1cqw;
 }
 .product__back p {
   color: #c6cccc;
   font-size: 1.3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2cqw;
   text-align: justify;
 }
 .product__back a {
