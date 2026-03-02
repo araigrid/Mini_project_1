@@ -1,17 +1,18 @@
 .catalog {
-  // background-color: yellow;
   grid-column: center-start / center-end;
   padding: 8rem 0;
 
   &__container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: minmax(22rem, 25rem) 1fr;
+    gap: 4rem;
   }
   &__sidebar {
-    // background: red;
     display: flex;
     flex-direction: column;
     grid-column: 1 / 2;
+    transition: all 0.3s ease;
+    position: relative;
     &__block {
       display: flex;
       flex-direction: column;
@@ -83,39 +84,40 @@
     }
   }
   &__content {
-    // background: brown;
     grid-column: 2 / end;
-    // perspective: 1200px;
+    display: flex;
+    flex-direction: column;
   }
 }
 
 .featured {
   &__container {
-    transition: transform 0.8s ease;
-    position: relative;
-    height: 42rem; // 🔥 IMPORTANT (must define height)
+    width: 100%;
+    margin-bottom: 4rem;
     perspective: 1200px;
-    margin-bottom: 20px;
+    min-height: auto;
   }
-  // &__container:hover {
-  //   transform: rotateY(180deg);
-  // }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+    overflow: visible;
+  }
   &__card,
   &__back {
-    position: absolute;
     width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
     backface-visibility: hidden;
     border-radius: 18px;
     transition: transform 0.8s ease;
   }
   &__card {
+    position: relative;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 5rem;
-    padding: 4.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr));
+    gap: 3rem;
+    padding: 3rem;
     background: radial-gradient(
       circle at top right,
       rgba(0, 242, 255, 0.15),
@@ -129,6 +131,10 @@
   }
 
   &__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     color: white;
     transform: rotateY(180deg);
     background: radial-gradient(
@@ -137,7 +143,7 @@
       transparent 40%
     );
     border: 1px solid $color-primary-light;
-    padding: 4rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -170,6 +176,7 @@
     overflow: hidden;
     border: 1px solid $color-heading;
     border-radius: 14px;
+    aspect-ratio: 2.5 / 2;
 
     img {
       height: 100%;
@@ -201,6 +208,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 3rem;
+    text-align: justify;
   }
 
   &__bottom {
@@ -249,7 +257,7 @@
 .product {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
     gap: 2rem;
     perspective: 1200px;
     background: transparent;
@@ -262,14 +270,10 @@
     width: 100%;
     height: 42rem;
     transition: transform 0.8s ease;
-    // transform-style: preserve-3d;
     margin-bottom: 3rem;
     backface-visibility: hidden;
     perspective: 1200px;
   }
-  // &__container:hover {
-  //   transform: rotateY(180deg);
-  // }
   &__container:hover &__card {
     transform: rotateY(-180deg);
   }
@@ -287,7 +291,7 @@
     left: 0;
     border-radius: 18px;
     padding: 2.2rem;
-    backface-visibility: hidden; // ✅ MUST BE HERE
+    backface-visibility: hidden;
     transition: transform 0.8s ease;
     overflow: hidden;
   }
@@ -322,6 +326,7 @@
       color: $color-heading;
       font-size: 1.3rem;
       margin-bottom: 2rem;
+      text-align: justify;
     }
     a {
       padding: 1rem;
@@ -335,8 +340,13 @@
   &__image {
     position: relative;
     margin-bottom: 1.8rem;
+    aspect-ratio: 3.6 / 2;
+    overflow: hidden;
     img {
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     &__badge {
@@ -389,4 +399,35 @@
       font-weight: 500;
     }
   }
+
+  &--out {
+    pointer-events: none;
+    opacity: 0.6;
+
+    .product__card,
+    .product__back {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      filter: grayscale(100%);
+    }
+
+    .product__price__new {
+      color: gray;
+    }
+
+    a {
+      background-color: gray !important;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+}
+
+.filter-toggle {
+  display: none;
+  padding: 1.2rem;
+  background: #00f2ff;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  cursor: pointer;
 }

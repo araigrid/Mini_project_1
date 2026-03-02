@@ -9,12 +9,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   transition: all 0.3s ease;
 
   &__left {
     display: flex;
+    flex: 1 1 auto;
     align-items: center;
     gap: 2rem;
 
@@ -60,6 +63,7 @@
 
   &__right {
     display: flex;
+    flex: 0 0 auto;
     align-items: center;
     gap: 1.5rem;
     fill: $color-primary-light;

@@ -14,7 +14,8 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     border: 1px solid $color-heading;
     border-bottom: none;
     border-right: none;

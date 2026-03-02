@@ -3,7 +3,7 @@ $color-primary: #050505;
 $color-primary-light: #00f2ff;
 $color-grey: #0d0d0d;
 $color-broder: #1a1a1a;
-$color-heading: #a0a0a0; //      #484f4e;
+$color-heading: #c6cccc; //#a0a0a0; //      #484f4e;
 $color-heading-1: #1b1c1c;
 $color-heading-2: #151717;
 $color-button: #1c1c1c;
@@ -43,7 +43,15 @@ body {
     minmax(min-content, 5vw)
     min-content repeat(5, min-content);
   grid-template-columns:
-    [full-start] minmax(6rem, 1fr)
+    [full-start] minmax(5rem, 1fr)
     [center-start] repeat(9, [col-start] minmax(min-content, 14rem) [col-end])
-    [center-end] minmax(6rem, 1fr) [full-end];
+    [center-end] minmax(5rem, 1fr) [full-end];
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.display_block {
+  display: none;
 }

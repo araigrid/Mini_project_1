@@ -6,6 +6,15 @@ const productGrid = document.querySelector('.product__grid');
 const featuredContainer = document.querySelector('.catalog__content');
 const eleSale = document.querySelector('.product__image__badge');
 
+let filterButton = document.querySelector('.filter-toggle');
+let sidebar = document.querySelector('.catalog__sidebar');
+let closeButton = document.querySelector('.close-sidebar');
+
+let signButton = document.querySelector('.header__right--sign');
+let modalOverlay = document.querySelector('#signupModal');
+let modalCloseBtn = document.querySelector('.modal__close');
+
+
 const displayProducts = function (items) {
   items.forEach((element,i) => {
     const stars = '★'.repeat(element.rating);
@@ -33,6 +42,7 @@ const displayProducts = function (items) {
     if(element.featured_product){
         html=`
             <div class="featured__container">
+            <div class ="featured__inner">
             <div class="featured__card">
                 <div class="featured__image">
                 <img src="${element.src}" alt="${element.name}" />
@@ -74,6 +84,7 @@ const displayProducts = function (items) {
                 <a href="product_details/?id=${i}" class="button-light">
                 VIEW DETAILS
                 </a>
+            </div>
             </div>
             </div>;
         `;
@@ -127,3 +138,27 @@ const displayProducts = function (items) {
 displayProducts(products);
 
 
+filterButton.onclick = function() {
+  
+  sidebar.classList.toggle('active');
+  filterButton.classList.add('hidden-mobile');
+};
+
+closeButton.onclick = function() {
+  sidebar.classList.remove('active');
+  filterButton.classList.remove('hidden-mobile');
+};
+
+
+
+signButton.onclick = function() {
+  modalOverlay.classList.add('active');
+};
+
+modalCloseBtn.onclick = function() {
+  modalOverlay.classList.remove('active');
+};
+
+modalOverlay.onclick = function(){
+    modalOverlay.classList.remove('active');
+};
